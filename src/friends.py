@@ -24,3 +24,9 @@ def total_money(people):
 def l_money(lender, lendee, amount):
     lender["monies"] -= amount
     lendee["monies"] += amount
+
+def all_favourite_foods(people):
+    favourites = []
+    for person in people:
+        favourites.extend(person["favourites"]["snacks"])
+    return favourites
