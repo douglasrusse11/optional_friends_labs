@@ -30,3 +30,10 @@ def all_favourite_foods(people):
     for person in people:
         favourites.extend(person["favourites"]["snacks"])
     return favourites
+
+def find_no_friendends(people):
+    no_friends = []
+    for person in people:
+        if not person["friends"]:
+            no_friends.append(person)
+    return no_friends
